@@ -13,7 +13,7 @@ WHERE cn.country_code ='[us]'
        OR ct.kind = 'distributors')
   AND it1.info ='budget'
   AND it2.info ='bottom 10 rank'
-  AND t.production_year >2000
+  AND t.production_year > 2000
   AND (t.title LIKE 'Birdemic%'
        OR t.title LIKE '%Movie%')
   AND t.id = mi.movie_id
