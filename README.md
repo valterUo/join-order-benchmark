@@ -1,3 +1,14 @@
+# Join order benchmark queries
+
+This package contains modified join order benchmark queries. The current version of Cinemagoer does not
+include the table `movie_info_idx` anymore which causes some of the queries to fail. 
+[This was a known bug](https://github.com/cinemagoer/cinemagoer/issues/231). Since we are not using
+the queries for benchmarking but training a circuit learning model for quantum computing, we are removing the
+table `movie_info_idx` from the queries where it appears and fixing the queries into a format 
+which should be close to the original queries.
+
+Original readme file from [Join order benchmark](https://github.com/gregrahn/join-order-benchmark).
+
 # join-order-benchmark
 
 This package contains the Join Order Benchmark (JOB) queries from:  
