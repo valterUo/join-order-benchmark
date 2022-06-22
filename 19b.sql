@@ -22,7 +22,8 @@ WHERE ci.note = '(voice)'
   AND n.gender ='f'
   AND n.name LIKE '%Angel%'
   AND rt.role ='actress'
-  AND t.production_year BETWEEN 2007 AND 2008
+  AND t.production_year >= 2007 
+  AND t.production_year <= 2008
   AND t.title LIKE '%Kung%Fu%Panda%'
   AND t.id = mi.movie_id
   AND t.id = mc.movie_id
@@ -37,4 +38,3 @@ WHERE ci.note = '(voice)'
   AND n.id = an.person_id
   AND ci.person_id = an.person_id
   AND chn.id = ci.person_role_id;
-

@@ -27,7 +27,8 @@ WHERE cct1.kind IN ('cast',
                   'Germany',
                   'Swedish',
                   'German')
-  AND t.production_year BETWEEN 1950 AND 2000
+  AND t.production_year >= 1950 
+  AND t.production_year <= 2000
   AND lt.id = ml.link_type_id
   AND ml.movie_id = t.id
   AND t.id = mk.movie_id
@@ -49,4 +50,3 @@ WHERE cct1.kind IN ('cast',
   AND mk.movie_id = cc.movie_id
   AND mc.movie_id = cc.movie_id
   AND mi.movie_id = cc.movie_id;
-

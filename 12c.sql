@@ -15,7 +15,8 @@ WHERE cn.country_code = '[us]'
                   'Horror',
                   'Western',
                   'Family')
-  AND t.production_year BETWEEN 2000 AND 2010
+  AND t.production_year >= 2000 
+  AND t.production_year <= 2010
   AND t.id = mi.movie_id
   AND mi.info_type_id = it1.id
   AND t.id = mc.movie_id

@@ -24,7 +24,8 @@ WHERE cn1.country_code != '[us]'
   AND lt.link IN ('sequel',
                   'follows',
                   'followed by')
-  AND t2.production_year BETWEEN 2000 AND 2010
+  AND t.production_year >= 2000 
+  AND t.production_year <= 2010
   AND lt.id = ml.link_type_id
   AND t1.id = ml.movie_id
   AND t2.id = ml.linked_movie_id

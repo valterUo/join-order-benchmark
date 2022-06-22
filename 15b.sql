@@ -16,7 +16,8 @@ WHERE cn.country_code = '[us]'
   AND mc.note LIKE '%(worldwide)%'
   AND mi.note LIKE '%internet%'
   AND mi.info LIKE 'USA:% 200%'
-  AND t.production_year BETWEEN 2005 AND 2010
+  AND t.production_year >= 2005 
+  AND t.production_year <= 2010
   AND t.id = at.movie_id
   AND t.id = mi.movie_id
   AND t.id = mk.movie_id
@@ -31,4 +32,3 @@ WHERE cn.country_code = '[us]'
   AND it1.id = mi.info_type_id
   AND cn.id = mc.company_id
   AND ct.id = mc.company_type_id;
-
